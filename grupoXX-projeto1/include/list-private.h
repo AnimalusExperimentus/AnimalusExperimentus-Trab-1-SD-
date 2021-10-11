@@ -19,13 +19,11 @@ void list_destroy_aux(struct node_t *head);
 
 void list_add_aux(struct node_t *node,struct entry_t *entry);
 
-int list_remove_aux(struct node_t *node, char *key);
-
 struct entry_t *list_get_aux(struct node_t *node, char *key);
 
 int list_size_aux(struct node_t *node);
 
-char **list_get_keys_aux(struct node_t *node,char **val);
+
 
 void list_print(struct list_t* list);
 

@@ -31,7 +31,8 @@ int testAddCauda() {
 	memcpy(entry->value->data,"abc1",5);
 
 	list_add(list,entry);
-	
+	printf("lif\n");
+
 	result = list_get(list,"abc") == entry && list_size(list) == 1;
 
 	list_destroy(list);
@@ -99,6 +100,7 @@ int testRemoveCauda() {
 /**************************************************************/
 
 int testGetKeys() {
+	
 	int result;
 	struct list_t *list = list_create();
 	char **keys;

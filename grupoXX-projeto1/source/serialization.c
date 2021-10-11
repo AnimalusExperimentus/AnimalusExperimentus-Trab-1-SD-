@@ -3,7 +3,7 @@
 #include <string.h>
 #include "../include/data.h"
 #include "../include/entry.h"
-#include "../include/serialization.h"
+#include "serialization.h"
 
 /* Serializa uma estrutura data num buffer que será alocado
  * dentro da função. Além disso, retorna o tamanho do buffer
