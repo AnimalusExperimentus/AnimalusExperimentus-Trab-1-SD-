@@ -1,0 +1,43 @@
+OBJECTOS = data.o entry.o list.o serialization.o tabla.o test_data.o test_entry.o test_list.o test_serialization.o test_table.o
+CC = gcc
+
+out: $(OBJECTOS)
+	$(CC) $(OBJECTOS) -o out
+
+data.o: data.c data.h
+	$(CC) -c data.c
+
+entry.o: entry.c entry.h data.h
+	$(CC) -c entry.c
+	
+list.o: list.c data.h entry.h list.h list-private.h
+	$(CC) -c list.c
+
+serialization.o: serialization.c serialization.h data.h entry.h
+	$(CC) -c serialization.c
+		
+tabla.o: tabla.c tabla.h data.h entry.h table-private.h list.h list-private.h
+	$(CC) -c table.c
+	
+teste_data.o: test_data.c data.h
+	$(CC) -c test_data.c
+
+teste_entry.o: test_entry.c data.h entry.h
+	$(CC) -c test_entry.c
+
+teste_list.o: test_list.c data.h entry.h list.h 
+	$(CC) -c test_list.c
+
+teste_serialization.o: test_serialization.c data.h entry.h serialization.h
+	$(CC) -c test_serialization.c
+	
+teste_table.o: test_table.c data.h entry.h table.h 
+	$(CC) -c test_table.c
+
+clean: 
+	rm -f *.o out
+
+
+
+
+

@@ -34,10 +34,11 @@ void entry_initialize(struct entry_t *entry){
 /* Função que elimina uma entry, libertando a memória por ela ocupada
  */
 void entry_destroy(struct entry_t *entry){
-
+if(entry!=NULL){
     data_destroy(entry->value);
     free(entry->key);
     free(entry);
+}
 }
 
 /* Função que duplica uma entry, reservando a memória necessária para a

@@ -14,7 +14,7 @@ void pee(const char *msg)
 
 /**************************************************************/
 int testCreate() {
-	
+	printf("ola");
 	int result;
 	struct data_t *data;
 
@@ -79,11 +79,14 @@ int testCreate2() {
 /**************************************************************/
 
 int testDup() {
+	
 	//char *data_s = "1234567890abc";
 	char *data_s = strdup("1234567890abc");
 	int result, data_size = strlen(data_s)+1;
 	struct data_t *data;
 	struct data_t *data2;
+
+	
 
 	printf("Módulo data -> teste data_dup: ");
 
@@ -142,14 +145,14 @@ int testDestroy(){
 int main() {
 	int score = 0;
 
-	printf("\nIniciando o teste do módulo data ei \n");
+	printf("\nIniciando o teste do módulo data \n");
 
 	score += testCreate();
-printf("test");
+printf("test\n");
 	score += testCreate2();
-printf("test1");
+printf("test1\n");
 	score += testDup();
-	printf("test2");
+printf("test2\n");
 	score += testDestroy();
 printf("test3");
 	printf("teste data bin: %d/4\n",score);
